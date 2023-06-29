@@ -2,18 +2,10 @@
 
 {% block content %}
 
-    <div class="container">
-        <div class="form-box">
-            <h1>Sign Up</h1>
+    <form action="" method="POST">
+	    <h1>Login</h1>
+	    {{ form.email.label }} {{ form.email() }}
 
-            <form action="">
-                <label for="">Username</label>
-                <input type="text" placeholder="Username/Email">
-                <br>
-                <label for="">password</label>
-                <input type="password" placeholder="Enter your password">
-            </form>
-        </div>
-    </div>
+    </form>
 
 {% endblock %}
