@@ -9,9 +9,34 @@
         <title>SEWMP</title>
     {% endif %}
 
-    <link rel="stylesheet" href="/myApp/static/css/nav.css">
+    <link rel="stylesheet" href="../static/css/nav.css">
 </head>
 <body>
+
+    <div class="navbar">
+        <nav>
+            <div class="navleft">
+                <a class= "logo" href="{{ url_for('homepage') }}">SEWMP</a>
+
+                <ul class="hr-link">
+                    <li><a href="{{ url_for('homepage') }}">Home</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                </ul>
+            </div>
+
+            <div class="navright">
+                <ul class="hr-link">
+                    <li><a href="{{ url_for('loginpage') }}">Login</a></li>
+                    <li><a href="{{ url_for('register') }}">Register</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
     
+
+    {% block content %}
+
+
+    {% endblock %}
 </body>
 </html>
