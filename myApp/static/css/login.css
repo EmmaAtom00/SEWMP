@@ -4,9 +4,17 @@
     height: 100vh;
     background-position: center;
     background-size: cover;
-    position: relative;
+    position: absolute;
+}
+
+.form-container {
+    width: 400px;
+    height: 300px;
+    margin: 10vh auto;
+    text-align: center;
+    border: 1px solid red;
 }
 
 .form-box {
-    margin: auto;
+    padding: 2em;
 }

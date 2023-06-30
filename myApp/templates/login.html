@@ -4,15 +4,17 @@
 <div class="container">
     <div class="form-container">
         
-    <form action="" method="POST">
+    <form action="" method="POST" class="form-box">
 	    <h1>Login</h1>
         <div class="email">
             {{ form.email.label }}
+            <br>
             {{ form.email() }}
         </div>
 
         <div class="password">
             {{ form.password.label }}
+            <br>
             {{ form.password() }}
         </div>
         
@@ -20,7 +22,7 @@
             {{ form.submit() }}
         </div>
     </form>
-    
+
     </div>
 </div>
 
