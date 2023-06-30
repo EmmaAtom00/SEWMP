@@ -21,7 +21,7 @@ nav {
 	bottom: 0;
 	height: 100vh;
 	left: 0;
-	background: #fff;
+	background: 	#00094B;
 	width: 280px;
 	overflow: hidden;
 	box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
@@ -29,35 +29,27 @@ nav {
 .logo {
 	text-align: center;
 	display: flex;
-	margin: 10px 0 0 10px;
-}
-.logo img {
-	width: 45px;
-	height: 45px;
-	border-radius: 50%;
+	margin: 10px 35px 0 0;
+	
 }
 .logo span {
 	font-weight: bold;
-	padding-left: 15px;
-	font-size: 18px;
+	padding-right: 105px;
+	font-size: 28px;
 	text-transform: uppercase;
 }
+/* .nav-list{
+	padding-top: 50px;
+} */
 a {
 	position: relative;
-	color: rgb(85, 83, 83);
+	color: white;
 	font-size: 14px;
 	display: table;
 	width: 280px;
-	padding: 10px;
+	padding: 25px 65px;
 }
-nav .fas {
-	position: relative;
-	width: 70px;
-	height: 40px;
-	top: 14px;
-	font-size: 20px;
-	text-align: center;
-}
+
 .nav-item {
 	position: relative;
 	top: 12px;
@@ -117,7 +109,7 @@ a:hover {
 	cursor: pointer;
 }
 .main-skills .card button:hover {
-	background: rgba(223, 70, 15, 0.856);
+	background: 	#00094B;
 }
 .main-skills .card i {
 	font-size: 22px;
