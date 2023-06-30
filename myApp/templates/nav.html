@@ -1,43 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% if title %}
-        <title>SEWMP - {{ title }}</title>
-    {% else %}
-        <title>SEWMP</title>
-    {% endif %}
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		{% if title %}
+		<title>SEWMP - {{ title }}</title>
+		{% else %}
+		<title>SEWMP</title>
+		{% endif %}
 
-    <link rel="stylesheet" href="../static/css/nav.css">
-    <link rel="stylesheet" href="../static/css/login.css">
-</head>
-<body>
+		<link rel="stylesheet" href="../static/css/nav.css" />
+		<link rel="stylesheet" href="../static/css/login.css" />
+	</head>
+	<body>
+		<!DOCTYPE html>
+		<html lang="en">
+			<head>
+				<meta charset="UTF-8" />
+				<title>Work Management Sysyetm | Dashboard</title>
+				<link rel="stylesheet" href="style.css" />
+			</head>
+			<body>
+				<div class="container">
+					<nav>
+						<ul>
+							<li>
+								<a href="#" class="logo">
+									<span class="nav-item">SEWMP</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+	
+									<span class="nav-list nav-item">Home</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+	
+									<span class="nav-list nav-item">About</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+			
+									<span class="nav-list nav-item">Planner</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+						
+									<span class="nav-list nav-item">TO-DO</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+		
+									<span class="nav-list nav-item">Schedule</span>
+								</a>
+							</li>
+							<li>
+								<a href="">
 
-    <div class="navbar">
-        <nav>
-            <div class="navleft">
-                <a class= "logo" href="{{ url_for('homepage') }}">SEWMP</a>
+									<span class="nav-list nav-item">Task</span>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									
+									<span class="nav-list nav-item">Settings
 
-                <ul class="hr-link">
-                    <li><a href="{{ url_for('homepage') }}">Home</a></li>
-                    <li><a href="{{ url_for('about') }}">About</a></li>
-                </ul>
-            </div>
+                                    </span>
+								</a>
+							</li>
+							<li>
+								<a href="" class="logout">
+									
+									<span class="nav-list nav-item">Log out</span>
+								</a>
+							</li>
+						</ul>
+					</nav>
 
-            <div class="navright">
-                <ul class="hr-link">
-                    <li><a href="{{ url_for('loginpage') }}">Login</a></li>
-                    <li><a href="{{ url_for('register') }}">Register</a></li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-    
+					<section class="main">
+						<div class="main-top">
+							<h1>Dashboard</h1>
+			
+						</div>
+						<div class="main-skills">
+							<div class="card">
+							
+								<h3>Planner</h3>
+								<p>PLan your work schedule</p>
+								<button>Learn more</button>
+							</div>
+							<div class="card">
+					
+								<h3>TO-DO</h3>
+								<p>Set your daily activities goals</p>
+								<button>Learn more</button>
+							</div>
+							<div class="card">
+			
+								<h3>Schedule</h3>
+								<p>Have a timeline for the day</p>
+								<button>Learn more</button>
+							</div>
+							<div class="card">
+								
+								<h3>Task</h3>
+								<p>Ensure that task are in it's active state.</p>
+								<button>Learn more</button>
+							</div>
+						</div>
 
-    {% block content %}
+						<section class="main-course">
+							<h1>Progress Management</h1>
+							<div class="course-box">
+								<ul>
+									<li class="active">In progress</li>
 
+									<li>incoming</li>
+									<li>finished</li>
+									<li>Deleted</li>
+                                    <li>Paused</li>
+								</ul>
+								<div class="course">
+									<div class="box">
+										<h3>Write a Letter to the Principle</h3>
+										<p>0% - progress</p>
+										<button>Details</button>
+								
+									</div>
+									<div class="box">
+										<h3>Finish group assignment</h3>
+										<p>30% - progress</p>
+										<button>Details</button>
+										
+									</div>
+									<div class="box">
+										<h3>Learn Software Engineering</h3>
+										<p>40% - progress</p>
+										<button>Details</button>
+										
+									</div>
+								</div>
+							</div>
+						</section>
+					</section>
+				</div>
+			</body>
+		</html>
 
-    {% endblock %}
-</body>
+		{% block content %} {% endblock %}
+	</body>
 </html>
