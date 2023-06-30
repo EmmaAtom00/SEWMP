@@ -1,11 +1,8 @@
-{% extends 'nav.html' %}
+{% extends 'nav.html' %} {% block content %}
 
-{% block content %}
-
-    <form action="" method="POST">
-	    <h1>Login</h1>
-	    {{ form.email.label }} {{ form.email() }}
-
-    </form>
+<form action="" method="POST">
+	<h1>Login</h1>
+	{{ form.email.label }} {{ form.email() }}
+</form>
 
 {% endblock %}
