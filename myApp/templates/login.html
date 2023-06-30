@@ -1,29 +1,45 @@
-{% extends 'nav.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if title %}
+		<title>SEWMP - {{ title }}</title>
+		{% else %}
+		<title>SEWMP</title>
+	{% endif %}
 
-{% block content %}
-<div class="container">
-    <div class="form-container">
-        
-    <form action="" method="POST" class="form-box">
-	    <h1>Login</h1>
-        <div class="email">
-            {{ form.email.label }}
-            <br>
-            {{ form.email() }}
-        </div>
+    <link rel="stylesheet" href="../static/css/login.css">
 
-        <div class="password">
-            {{ form.password.label }}
-            <br>
-            {{ form.password() }}
-        </div>
-        
-        <div class="submit">
-            {{ form.submit() }}
-        </div>
-    </form>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
+    <div class="container">
+        <div class="form">
+            <form action="" method="post" class="form-box">
+                <h1>Login</h1>
+
+                <div class="email">
+                    {{ form.email.label }}
+                    <br>
+                    {{ form.email(calss = "form-email") }}
+                </div>
+
+                <div class="password">
+                    {{ form.password.label }}
+                    <br>
+                    {{ form.password(class = "form-password")}}
+                </div>
+
+                <div class="submit">
+                    {{ form.submit(class = "submit-button") }}
+                </div>
+            </form>
+        </div>
     </div>
-</div>
-
-{% endblock %}
+    
+</body>
+</html>
