@@ -1,6 +1,7 @@
 from flask import render_template, redirect, url_for, flash
 from packages.form import RegistrationForm, LoginForm
 from packages import app
+from packages.models import user, create_task
 
 @app.route("/")
 def homepage():
