@@ -34,10 +34,21 @@
                     {{ form.password(class = "form-password")}}
                 </div>
 
-                <div class="submit">
+		<div class = "check-box">
+			{{ form.remember_me() }}
+			{{ form.remember_me.label(class = "check-box-label") }}
+		</div>
+
+                <div class = "submit-button">
                     {{ form.submit(class = "submit-button") }}
                 </div>
+		<small class = "small-txt">
+		    Don't have an account yet? <a href = "url_for("register")" class = "Signup">Sign Up now</a>
+		</small>
+
             </form>
+
+	    
         </div>
     </div>
     

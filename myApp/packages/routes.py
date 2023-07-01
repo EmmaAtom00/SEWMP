@@ -15,6 +15,13 @@ def register():
 @app.route("/login", methods = ["GET", "POST"])
 def loginpage():
     form = LoginForm()
+    if form.validate_on_submit():
+        if form.email.data == admin@swemp.com and form.password.data == 'password':
+            flash("Login Successful", 'success')
+            return redirect(url_for('homepage'))
+        else:
+            flash("Username or Password incorrect")
+
     return render_template("login.html", form =form, title = "Login")
 
 
