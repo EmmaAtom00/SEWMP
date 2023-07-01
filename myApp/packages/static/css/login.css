@@ -26,7 +26,7 @@ fieldset {
 .alert-danger {
     background-color: rgba(255, 0, 0, 0.11);
     text-align: center;
-    width: 40%;
+    width: 20%;
     margin: 0 auto;
     border-radius: 5px;
     margin-top: 2em;
@@ -35,7 +35,7 @@ fieldset {
 .alert-success {
     background-color: rgba(11, 218, 11, 0.623);
     text-align: center;
-    width: 40%;
+    width: 20%;
     margin: 0 auto;
     border-radius: 5px;
     margin-top: 2em;

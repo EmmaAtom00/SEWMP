@@ -24,11 +24,15 @@ def loginpage():
         email = form.email.data
         if email == "admin@swemp.com" and password == 'password':
             flash(f"Login Successful", 'success')
-            return redirect(url_for('homepage'))
+            return redirect(url_for('dashboard'))
         else:
             flash(f"Username or Password incorrect", 'danger')
 
     return render_template("login.html", form =form, title = "Login")
+
+@app.route("/dashboard")
+def dashboard():
+    return render_template("dashboard.html")
 
 
 @app.route("/about")
