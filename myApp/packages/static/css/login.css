@@ -18,3 +18,30 @@ body {
     text-align: center;
     padding-top: 40px;
 }
+
+fieldset {
+    border: none;
+}
+
+.alert-danger {
+    background-color: rgba(255, 0, 0, 0.11);
+    text-align: center;
+    width: 40%;
+    margin: 0 auto;
+    border-radius: 5px;
+    margin-top: 2em;
+}
+
+.alert-success {
+    background-color: rgba(11, 218, 11, 0.623);
+    text-align: center;
+    width: 40%;
+    margin: 0 auto;
+    border-radius: 5px;
+    margin-top: 2em;
+}
+
+.alert-message {
+    padding: 20px 20px;
+    font-size: medium;
+}

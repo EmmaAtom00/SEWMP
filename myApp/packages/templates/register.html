@@ -1,15 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% if title %}
-		<title>SEWMP - {{ title }}</title>
-		{% else %}
-		<title>SEWMP</title>
-	{% endif %}
-</head>
-<body>
-    
-</body>
-</html>
+{% extends "navbar.html" %}
+
+{% block content %}
+
+	<div class="reg-form">
+		<form action="" method="POST" class="form-box">
+			{{ form.hidden_tag() }}
+			<fieldset>
+
+				<h1 class="hero-text">Sign Up</h1>
+
+				<div class="firstname">
+					{{ form.firstname.label(class = "firstname-label") }}
+					<br>
+					{{ form.firstname(class = "firstname-box") }}
+				</div>
+				<div class="lastname">
+					{{ form.lastname.label(class = "lastname-label") }}
+					<br>
+					{{ form.lastname(class = "lastname-box") }}
+				</div>
+				<div class="email">
+					{{ form.email.label(class = "email-label") }}
+					<br>
+					{{ form.email(class = "email-box") }}
+				</div>
+				<div class="username">
+					{{ form.username.label(class = "username-label") }}
+					<br>
+					{{ form.username(class = "username-box") }}
+				</div>
+				<div class="password">
+					{{ form.password.label(class = "password-label") }}
+					<br>
+					{{ form.password(class = "password-box") }}
+				</div>
+				<div class="confrim_password">
+					{{ form.confirm_password.label(class = "confirm_password-label") }}
+					<br>
+					{{ form.confirm_password(class = "confirm_password-box") }}
+				</div>
+
+				<div class="submit">
+					{{ form.submit(class = "submit-button") }}
+				</div>
+			</fieldset>
+		</form>
+	</div>
+
+{% endblock %}

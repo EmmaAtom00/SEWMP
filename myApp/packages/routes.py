@@ -4,23 +4,29 @@ from packages import app
 from packages.models import user, create_task
 
 @app.route("/")
+@app.route("/home")
 def homepage():
     return render_template("index.html", title = "Home")
 
-@app.route("/register")                     
+@app.route("/register", methods =["GET", "POST"])                     
 def register():
     form = RegistrationForm()
+    if form.validate_on_submit():
+        flash(f"Registration successful {form.username.data}! you can proceed to login", "success")
+        return redirect(url_for("loginpage"))
     return render_template("register.html", form = form, title = "Registration")
 
 @app.route("/login", methods = ["GET", "POST"])
 def loginpage():
     form = LoginForm()
     if form.validate_on_submit():
-        if form.email.data == admin@swemp.com and form.password.data == 'password':
-            flash("Login Successful", 'success')
+        password = form.password.data
+        email = form.email.data
+        if email == "admin@swemp.com" and password == 'password':
+            flash(f"Login Successful", 'success')
             return redirect(url_for('homepage'))
         else:
-            flash("Username or Password incorrect")
+            flash(f"Username or Password incorrect", 'danger')
 
     return render_template("login.html", form =form, title = "Login")
 

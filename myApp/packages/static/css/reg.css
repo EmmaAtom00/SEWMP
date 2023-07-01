@@ -1,0 +1,17 @@
+.reg-form {
+    background-color: #eee;
+    width: 400px;
+    margin: 2em auto;
+}
+
+.form-box {
+    padding: 4em;
+}
+.hero-text {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+fieldset {
+    border: none;
+}

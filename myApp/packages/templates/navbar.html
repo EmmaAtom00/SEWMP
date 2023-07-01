@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		{% if title %}
+		<title>SEWMP - {{ title }}</title>
+		{% else %}
+		<title>SEWMP</title>
+		{% endif %}
+
+		<!-- <link rel="stylesheet" href="../static/css/nav.css" />
+		<link rel="stylesheet" href="../static/css/login.css" /> -->
+
+		<link rel="stylesheet" href="../static/css/navbar.css">
+		<link rel="stylesheet" href="../static/css/reg.css">
+
+		<!-- Fonts from google (poppins) -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+	</head>
+	<body>
+
+		<header>
+			<div class="navbar">
+
+				<div class="leftbar">
+					<div class="logo">
+						<h1><a href="{{ url_for('homepage') }}">SEWMP</a></h1>
+					</div>
+					<div class="leftnav">
+						<ul>
+							<li><a href="#">Home</a></li>
+							<li><a href="#">Feature</a></li>
+							<li><a href="#">About</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="rightbar">
+					<div class="rightnav">
+						<ul>
+							<li><a href="{{ url_for('loginpage') }}">Login</a></li>
+							<li><a href="{{ url_for('register') }}">Register</a></li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</header>
+
+		{% block content %}
+		
+		
+		{% endblock %}
+	</body>
+</html>

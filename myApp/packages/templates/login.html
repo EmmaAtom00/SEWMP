@@ -17,34 +17,48 @@
 </head>
 <body>
 
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">
+                    <p class="alert-message">{{ message }}</p>
+                </div>
+            {% endfor%}
+        {% endif %}
+    {% endwith %}
+
     <div class="container">
         <div class="form">
-            <form action="" method="post" class="form-box">
-                <h1>Login</h1>
+            <form action="" method="POST" class="form-box">
+                {{ form.hidden_tag() }}
+                <fieldset>
 
-                <div class="email">
-                    {{ form.email.label }}
-                    <br>
-                    {{ form.email(calss = "form-email") }}
-                </div>
+                    <h1>Login</h1>
 
-                <div class="password">
-                    {{ form.password.label }}
-                    <br>
-                    {{ form.password(class = "form-password")}}
-                </div>
+                    <div class="email">
+                        {{ form.email.label }}
+                        <br>
+                        {{ form.email(calss = "form-email") }}
+                    </div>
 
-		<div class = "check-box">
-			{{ form.remember_me() }}
-			{{ form.remember_me.label(class = "check-box-label") }}
-		</div>
+                    <div class="password">
+                        {{ form.password.label }}
+                        <br>
+                        {{ form.password(class = "form-password")}}
+                    </div>
 
-                <div class = "submit-button">
-                    {{ form.submit(class = "submit-button") }}
-                </div>
-		<small class = "small-txt">
-		    Don't have an account yet? <a href = "url_for("register")" class = "Signup">Sign Up now</a>
-		</small>
+                    <div class = "check-box">
+                        {{ form.remember_me() }}
+                        {{ form.remember_me.label(class = "check-box-label") }}
+                    </div>
+
+                            <div class = "submit-button">
+                                {{ form.submit(class = "submit-button") }}
+                            </div>
+                    <small class = "small-txt">
+                        Don't have an account yet? <a href = "{{ url_for('register') }}" class = "Signup">Sign Up now</a>
+                    </small>
+                </fieldset>
 
             </form>
 
