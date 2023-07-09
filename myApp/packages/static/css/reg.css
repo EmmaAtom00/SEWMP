@@ -37,3 +37,27 @@ fieldset {
     padding: 0 10px;
     margin: 5px 0 20px 0;
 }
+
+.small-txt a{
+    color: orangered;
+    text-decoration: none;
+}
+
+.small-txt {
+    justify-content: center;
+    display: flex;
+}
+
+.reglogo {
+    padding-top: 20px;
+    padding-left: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #00094B;
+    text-decoration: none;
+    display: flex;
+}
+
+.reg-form span {
+    color: orangered;
+}
