@@ -1,0 +1,22 @@
+.sec-1 {
+    width: 80%;
+    margin: 4em auto;
+}
+
+.hero-sec {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero-sec p {
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.hero-sec p span {
+    font-weight: bold;
+}
+
+.hero-sec img {
+    width: 50%;
+}

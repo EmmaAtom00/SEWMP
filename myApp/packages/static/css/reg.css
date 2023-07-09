@@ -15,3 +15,25 @@
 fieldset {
     border: none;
 }
+
+.submit-button {
+    background: orangered;
+    border: none;
+    padding: 10px 12px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.submit {
+    margin: 20px auto;
+    width: 40%;
+    text-align: center;
+}
+
+.firstname-box, .lastname-box, .email-box, .username-box, .password-box, .confirm_password-box {
+    width: 90%;
+    height: 25px;
+    outline: none;
+    padding: 0 10px;
+    margin: 5px 0 20px 0;
+}

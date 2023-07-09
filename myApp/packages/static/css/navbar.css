@@ -10,6 +10,8 @@ body {
 
 header {
     background-color: #00094B;
+    position: sticky;
+    top: 0;
 }
 
 .navbar {
@@ -19,6 +21,7 @@ header {
     width: 80%;
     margin: 0 auto;
     color: white;
+    padding: 10px 0;
 }
 
 .leftbar {
@@ -45,7 +48,7 @@ header {
     font-size: small;
 }
 
-.rightnav a:hover {
+.rightnav .reg:hover {
     border-bottom: 1px solid white;
     transition: 0.1s;
 }
@@ -53,4 +56,16 @@ header {
 .leftnav a:hover {
     border-bottom: 1px solid white;
     transition: 0.1s;
+}
+
+.login-btn {
+    background-color: orangered;
+    padding: 5px 24px;
+    border-radius: 5px;
+}
+
+.login-btn:hover {
+    border-bottom: unset;
+    background-color: rgba(255, 68, 0, 0.548);
+    transition: 0.2s;
 }

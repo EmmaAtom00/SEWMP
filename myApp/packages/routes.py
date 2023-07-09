@@ -1,6 +1,6 @@
 from flask import render_template, redirect, url_for, flash
 from packages.form import RegistrationForm, LoginForm
-from packages import app
+from packages import app, db, bcrypt
 from packages.models import user, create_task
 
 @app.route("/")
@@ -11,6 +11,7 @@ def homepage():
 @app.route("/register", methods =["GET", "POST"])                     
 def register():
     form = RegistrationForm()
+    email = form.email.data
     if form.validate_on_submit():
         flash(f"Registration successful {form.username.data}! you can proceed to login", "success")
         return redirect(url_for("loginpage"))
