@@ -35,7 +35,24 @@ fieldset {
     height: 25px;
     outline: none;
     padding: 0 10px;
-    margin: 5px 0 20px 0;
+    margin: 5px 0 0 0;
+}
+
+.is-invalid {
+    width: 90%;
+    height: 25px;
+    outline: none;
+    padding: 0 10px;
+    margin: 5px 0 0 0;
+    border: 1px solid red; 
+}
+
+.invalid-feedback {
+    font-size: 12px;
+}
+
+.firstname, .lastname, .email, .username, .password, .confirm_password {
+    margin-bottom: 20px;
 }
 
 .small-txt a{

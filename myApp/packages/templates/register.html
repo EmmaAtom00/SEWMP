@@ -14,32 +14,98 @@
 				<div class="firstname">
 					{{ form.firstname.label(class = "firstname-label") }}
 					<br>
-					{{ form.firstname(class = "firstname-box") }}
+
+					{% if form.firstname.errors %}
+						{{ form.firstname(class="is-invalid") }}
+						<div class="invalid-feedback">
+							{% for error in form.firstname.errors %}
+								<span>{{ error }}</span>
+							{% endfor %}
+						</div>
+					{% else %}
+						{{ form.firstname(class = "firstname-box") }}
+					{% endif %}
+					
 				</div>
 				<div class="lastname">
 					{{ form.lastname.label(class = "lastname-label") }}
 					<br>
-					{{ form.lastname(class = "lastname-box") }}
+
+					{% if form.lastname.errors %}
+						{{ form.lastname(class="is-invalid") }}
+						<div class="invalid-feedback">
+							{% for error in form.lastname.errors %}
+								<span>{{ error }}</span>
+							{% endfor %}
+						</div>
+					{% else %}
+						{{ form.lastname(class = "lastname-box") }}
+					{% endif %}
+					
 				</div>
 				<div class="email">
 					{{ form.email.label(class = "email-label") }}
 					<br>
-					{{ form.email(class = "email-box") }}
+
+					{% if form.email.errors %}
+						{{ form.email(class="is-invalid") }}
+						<div class="invalid-feedback">
+							{% for error in form.email.errors %}
+								<span>{{ error }}</span>
+							{% endfor %}
+						</div>
+					{% else %}
+						{{ form.email(class = "email-box") }}
+					{% endif %}
+
 				</div>
 				<div class="username">
 					{{ form.username.label(class = "username-label") }}
 					<br>
-					{{ form.username(class = "username-box") }}
+
+					{% if form.username.errors %}
+						{{ form.username(class="is-invalid") }}
+						<div class="invalid-feedback">
+							{% for error in form.username.errors %}
+								<span>{{ error }}</span>
+							{% endfor %}
+						</div>
+					{% else %}
+						{{ form.username(class = "username-box") }}
+					{% endif %}
+					
 				</div>
 				<div class="password">
 					{{ form.password.label(class = "password-label") }}
 					<br>
-					{{ form.password(class = "password-box") }}
+
+					{% if form.password.errors %}
+						{{ form.password(class="is-invalid") }}
+						<div class="invalid-feedback">
+							{% for error in form.password.errors %}
+								<span>{{ error }}</span>
+							{% endfor %}
+						</div>
+					{% else %}
+						{{ form.password(class = "password-box") }}
+					{% endif %}
+					
 				</div>
 				<div class="confrim_password">
 					{{ form.confirm_password.label(class = "confirm_password-label") }}
 					<br>
-					{{ form.confirm_password(class = "confirm_password-box") }}
+
+					{% if form.confirm_password.errors %}
+						{{ form.confirm_password(class="is-invalid") }}
+						<div class="invalid-feedback">
+							{% for error in form.confirm_password.errors %}
+								<span>{{ error }}</span>
+							{% endfor %}
+						</div>
+					{% else %}
+						{{ form.confirm_password(class = "confirm_password-box") }}
+					{% endif %}
+					
 				</div>
 
 				<div class="submit">
