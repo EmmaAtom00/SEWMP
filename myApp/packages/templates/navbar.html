@@ -44,9 +44,14 @@
 				<div class="rightbar">
 					<div class="rightnav">
 						<ul>
+							{% if current_user.is_authenticated %}
+							<li><a class = "reg" href="{{ url_for('dashboard') }}">Dashboard</a></li>
+							<li><a class="login-btn" href="{{ url_for('logout') }}">Logout</a></li>
+							{% else %}
 							<li><a class = "reg" href="{{ url_for('register') }}">Register</a></li>
 							<li><a class="login-btn" href="{{ url_for('loginpage') }}">Login</a></li>
-							
+							{% endif %}
+
 						</ul>
 					</div>
 				</div>

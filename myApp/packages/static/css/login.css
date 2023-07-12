@@ -7,6 +7,7 @@
 body {
     background: #dfe9f5;
 }
+
 .container {
     width: 400px;
     height: auto;
@@ -27,24 +28,25 @@ fieldset {
 .alert-danger {
     background-color: rgba(255, 0, 0, 0.11);
     text-align: center;
-    width: 20%;
+    width: max-content;
     margin: 0 auto;
     border-radius: 5px;
     margin-top: 2em;
+}
+
+p.alert-message {
+    background-color: rgba(255, 0, 0, 0.11);
+    text-align: center;
+    width: max-content;
+    margin: 0 auto;
+    border-radius: 5px;
+    margin-top: 2em;
+    padding: 20px 20px;
+    font-size: medium;
 }
 
 .alert-success {
-    background-color: rgba(11, 218, 11, 0.623);
-    text-align: center;
-    width: 20%;
-    margin: 0 auto;
-    border-radius: 5px;
-    margin-top: 2em;
-}
-
-.alert-message {
-    padding: 20px 20px;
-    font-size: medium;
+    display: none;
 }
 
   

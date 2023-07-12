@@ -1,0 +1,14 @@
+{% extends "navbar.html" %}
+
+{% block content %}
+	<div class="content-section">	
+        <div class="media">
+            <img src="{{ image_file }}" alt="" class="userimg">
+            <div class="media-body">
+                <h2 class="account-heading">{{ current_user.username }}</h2>
+                <p class="secondary-text">{{ current_user.email }}</p>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
